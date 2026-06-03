@@ -59,7 +59,7 @@ def cadastrar():
                 email=email,
                 telefone=telefone,
             )
-        aluno = Aluno(nome=nome, email=email)
+        aluno = Aluno(nome=nome, email=email, telefone=telefone)
         db.session.add(aluno)
         db.session.commit()
         return redirect(url_for("index"))
